@@ -52,7 +52,7 @@ function Signin() {
                                 value={novoUser.password}
                                 onChange={handleInputChange}
                             />
-                            <button type="submit">Adicionar o Livro</button>
+                            <button type="submit">Criar conta</button>
                         </form>
                     </>
         </div >
