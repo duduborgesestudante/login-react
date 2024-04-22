@@ -1,58 +1,21 @@
-/* eslint-disable no-useless-catch */
-import { useState } from 'react';
-import axios from 'axios';
-const logar = async (username, password) => {
+import './App.css'
 
-  try {
-    const response = await axios.post('http://localhost:8090/api/login', {
-      username: username,
-      password: password,
-    });
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Home} from './home'
+import { Signin } from './signin';
+import Login from './login';
 function App() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
-
-  const handleLogin = async () => {
-    try {
-      const response = await logar(username, password);
-      alert(response + " " + password);
-    } catch (error) {
-      console.error('Erro ao se logar:', error);
-    }
-  };
   return (
-    <div>
-      <h1>TrêsáNo login SyStem</h1>
-      <form>
-        <label>
-          Usuário:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Senha:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="button" onClick={handleLogin}>
-          Login
-        </button>
-      </form>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
+
+  )
 }
-export default App;
+
+export default App
