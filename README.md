@@ -1,8 +1,5 @@
-# React + Vite
+para iniciar o sevidor front-end executar os seguintes comandos: 
+Dentro da pasta raiz do projeto, executar "npm install", para instalar as dependencias do projeto.
+Executar "npm run dev" para iniciar o servidor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para iniciar o servidor backend, rodar o comando "java -jar back_end.jar" dentro da pasta raiz do projeto
